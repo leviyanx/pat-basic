@@ -1,27 +1,33 @@
-/***********************************************************
--  File name : A+BºÍC
--  Author : Yanlian  Version : 1.0  Date : 2019Äê2ÔÂ3ÈÕĞÇÆÚÈÕ
-***********************************************************/
+/*************************************************************
+-  File name : A+Bå’ŒC
+-  Author : Yan Lian  Version : 2.0  Date : 2019å¹´2æœˆ3æ—¥æ˜ŸæœŸæ—¥
+-  History :
+
+   1.Date : 2019å¹´2æœˆ3æ—¥æ˜ŸæœŸæ—¥
+     Author : Yan Lian
+     Modification : å°†test_examçš„æ•°æ®ç±»å‹ä»intæ”¹ä¸ºlong longã€‚
+                    å°†è¾“å…¥ä» %d æ”¹ä¸º %lld
+*************************************************************/
 #include <stdio.h>
 
 int main()
 {
     int test_num;
 
-    scanf("%d", &test_num); //ÊäÈë²âÊÔÓÃÀı¸öÊı
+    scanf("%d", &test_num); //è¾“å…¥æµ‹è¯•ç”¨ä¾‹ä¸ªæ•°
 
-    /*´æ´¢²âÊÔÓÃÀı*/
+    /*å­˜å‚¨æµ‹è¯•ç”¨ä¾‹*/
     int i, j;
-    int test_exam[test_num][3];
+    long long test_exam[test_num][3];
     for (i = 0; i < test_num; i++)
     {
         for (j = 0; j < 3; j++)
         {
-            scanf("%d", &test_exam[i][j]);
+            scanf("%lld", &test_exam[i][j]);
         }
     }
 
-    /*±È½Ï²âÊÔÓÃÀı*/
+    /*æ¯”è¾ƒæµ‹è¯•ç”¨ä¾‹*/
     for (i = 0; i < test_num; i++)
     {
         if (test_exam[i][0] + test_exam[i][1] > test_exam[i][2])
