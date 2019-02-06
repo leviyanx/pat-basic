@@ -1,17 +1,17 @@
 /**
--  Author : Yan lian  Version : 2.0  Date : 2019��2��6��������
+-  Author : Yan lian  Version : 2.0  Date : 2019年2月6日星期三
 -  Thought :
-   1.�ȴ洢һ�������ٲ��������̬������Ԫ�غ�DA��DB�Ƚϣ���¼�Ƚϳɹ�����
-   2.�����PA��PB�Ĵ�С�������
+   1.先存储一个完整的数，再通过取模10和除10运算一位一位地比较
+   2.计算出PA和PB的大小，再相加
 
 -  Modification :
-   1.�� int ��Ϊlong long
-   2.˼·�޸ģ�����һ��ʼ��������洢�������ȴ洢һ��������������ͨ��ȡģ10�ͳ�10����һλһλ�رȽ�
+   1.将 int 改为long long
+   2.思路修改：不是一开始就用数组存储，而是先存储一个完整的数，再通过取模10和除10运算一位一位地比较
 
 -  History :
    1.Author : Yan lian
    2.Version : 1.0
-   3.Date : 2019��2��5�����ڶ�
+   3.Date : 2019年2月5日星期二
 */
  #include <stdio.h>
 
@@ -23,7 +23,7 @@
 
     scanf("%lld %lld %lld %lld", &A, &DA, &B, &DB);
 
-    /*��PA*/
+    /*求PA*/
     while (A != 0)
     {
         if (A % 10 == DA)
@@ -33,7 +33,7 @@
         A /= 10;
     }
 
-    /*��PB*/
+    /*求PB*/
     while (B != 0)
     {
         if (B % 10 == DB)
